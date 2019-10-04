@@ -31,6 +31,17 @@ namespace GitHub
 
             Console.WriteLine("A legnagyobb elem: {0}", max);
 
+            int min;
+
+            
+            min = szamok[0];
+            for (int i = 1; i < n; i++)
+                if (szamok[i] < min)
+                    min = szamok[i];
+
+            Console.WriteLine("A legkisebb elem: {0}", min);
+
+
             Console.ReadLine();
         }
     }
