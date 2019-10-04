@@ -16,13 +16,35 @@ namespace GitHub
             int n = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Adjon meg a számokat!");
-            for (int i = 0; i < n; i++)
-            {
+            /*  for (int i = 0; i < n; i++)
+              {
 
-            
-            int szam = Convert.ToInt32(Console.ReadLine());
-            szamok.Add(szam);
-            }
+                  if ()
+                  {
+                      int szam = Convert.ToInt32(Console.ReadLine());
+                      szamok.Add(szam);
+                  }
+
+              }*/
+            bool kilep = false;
+            do
+            {
+                try
+                {
+                    int szam = Convert.ToInt32(Console.ReadLine());
+                    if (szam > 0 || szam ==0 || szam < 0)
+                    {
+                        szamok.Add(szam);
+                    }
+
+
+                }
+                catch (FormatException)
+                {
+
+                    Console.WriteLine("Nem számot adott meg!");
+                }
+            } while (!kilep);
 
             int max = szamok[0];
             for (int i = 0; i < n; i++)
