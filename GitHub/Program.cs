@@ -10,6 +10,28 @@ namespace GitHub
     {
         static void Main(string[] args)
         {
+            //-- megoldasom----
+            List<int> szamok = new List<int>();
+            Console.WriteLine("Adja meg hány darab számotr szeretne megadni!");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Adjon meg a számokat!");
+            for (int i = 0; i < n; i++)
+            {
+
+            
+            int szam = Convert.ToInt32(Console.ReadLine());
+            szamok.Add(szam);
+            }
+
+            int max = szamok[0];
+            for (int i = 0; i < n; i++)
+                if (szamok[i] > max)
+                    max = szamok[i];
+
+            Console.WriteLine("A legnagyobb elem: {0}", max);
+
+            Console.ReadLine();
         }
     }
 }
